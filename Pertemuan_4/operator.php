@@ -64,4 +64,16 @@ $hasilTidakIdentik = $a !== $b;
 
 echo "<br>";
 
+echo "Hasil Identik : " . ($hasilIdentik ? "True" : "False") . "<br>";
+echo "Hasil Tidak Identik : " . ($hasilTidakIdentik ? "True" : "False") . "<br>";
+
+echo "<br>"; 
+
+$totalKursi = 45;
+$totalTerisi = 28;
+$sisaKursi = $totalKursi - $totalTerisi;
+
+echo "Total kursi = " . $totalKursi . "<br>"; 
+echo " telah terisi =  " . $totalTerisi . "<br>";
+echo "Sisa kursinya adalah = " . $sisaKursi . "<br>";
 ?>

@@ -12,6 +12,9 @@ echo "Variabel benar: $benar, Variabel salah: $salah";
 define("NAMA_SITUS", "WebsiteKu.com");
 define("Tahun_Pendirian", 2023);
 
-echo "Selamat datang di " . NAMA_SITUS . ", situs yang didirikan pada tahun " . Tahun_Pendirian . ".";
+echo "<br>";
+
+echo "Selamat datang di " . NAMA_SITUS . ", situs yang 
+didirikan pada tahun " . Tahun_Pendirian . ".";
 
 ?>
