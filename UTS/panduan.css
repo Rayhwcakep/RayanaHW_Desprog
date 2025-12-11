@@ -1,0 +1,250 @@
+/* --- 1. PENGATURAN DASAR & VARIABEL --- */
+:root {
+    --primary-bg: #122121; /* Warna latar utama yang sangat gelap */
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --accent-color: #dbc19b; /* Warna emas/krem untuk aksen */
+    
+    --font-heading: 'Times New Roman', serif; /* Font untuk judul utama */
+    --font-body: 'Times New Roman', sans-serif; /* Font untuk teks biasa */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* --- 2. HEADER & NAVIGASI --- */
+.navbar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 5%;
+    border-bottom: 1px solid rgba(224, 224, 224, 0.15);
+}
+
+.nav-links a, .account-link a {
+    color: var(--text-primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    margin-left: 30px;
+    transition: color 0.3s;
+}
+
+.nav-links a:first-child {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-left: 0;
+}
+
+.nav-links a:hover, .account-link a:hover {
+    color: var(--accent-color);
+}
+
+.account-link i {
+    margin-right: 8px;
+}
+
+/* --- 3. HERO SECTION --- */
+.hero-background {
+    height: 100vh;
+    background: linear-gradient(rgba(18, 26, 24, 0.7), rgba(18, 26, 24, 0.9)),
+                url('img/panduan.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.line {
+    width: 100px;
+    height: 1px;
+    background-color: var(--accent-color);
+    margin: 25px auto;
+}
+
+.icon-book .fas {
+    font-size: 7rem; /* Ubah ke ukuran yang Anda inginkan */
+}
+
+/* --- 4. KONTEN PANDUAN --- */
+.guide-content {
+    background-color: var(--content-bg);
+    padding: 5rem 10%;
+}
+
+.card {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 5rem;
+    background-color: var(--primary-bg);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.card:last-child {
+    margin-bottom: 0;
+}
+
+.card.reverse {
+    flex-direction: row-reverse;
+}
+
+.card-image {
+    flex: 1;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+
+.card-text {
+    flex: 1.5; /* Memberi lebih banyak ruang untuk teks */
+}
+
+.card-text h4 {
+    font-family: var(--font-heading);
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-text > p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.card-text ol {
+    padding-left: 20px;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+.card-text li {
+    margin-bottom: 0.7rem;
+    font-size: 1.5rem;
+}
+
+/* --- 5. FOOTER --- */
+footer {
+    width: 100%;
+    padding: 30px 80px;
+    font-size: 13px;
+    background-color: transparent;
+    color: #a0a0a0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-column {
+    flex-basis: 20%;
+}
+
+.footer-column.links, .footer-column.social {
+    flex-basis: 20%;
+}
+
+
+.footer-column h4 {
+    font-family: 'Times New Roman', sans-serif;
+    margin-bottom: 15px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #d4af37;
+}
+
+.footer-column p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-column span {
+    font-size: 12px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    text-transform: lowercase;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 12px;
+    color: #a0a0a0;
+}
+
+.footer-column ul li a:hover {
+    color: #ffffff;
+}
+
+/* --- 6. RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+    .navbar nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .card, .card.reverse {
+        flex-direction: column;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

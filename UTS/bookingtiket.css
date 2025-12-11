@@ -1,0 +1,499 @@
+/* Reset dan Pengaturan Dasar */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', sans-serif;
+    background-color: #0c1a1e;
+    color: #ffffff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Container Utama Latar Belakang */
+.hero-container {
+    height: 100vh;
+    background-image: linear-gradient(rgba(12, 26, 30, 0.6), rgba(12, 26, 30, 1)),
+    url('img/bokingtiket.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header dan Navigasi */
+.navbar-container {
+    background-color: transparent;
+    color: #e0e0e0;
+    border-bottom: 1px solid #3a4a4d;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 35px;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #c0c0c0;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #ffffff;
+}
+
+.nav-right {
+    display: flex;
+}
+
+.account-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    transition: opacity 0.3s ease;
+}
+
+.account-link:hover {
+    opacity: 0.8;
+}
+
+.account-link svg {
+    stroke: #ffffff;
+}
+
+/* Konten Hero */
+.hero-content {
+    text-align: center;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #e0ac5c;
+    letter-spacing: 4px;
+    margin: 0;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.hero-content h1::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: #e0ac5c;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-content p {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    margin-top: 15px;
+    color: #ccc;
+}
+
+.scroll-down {
+    margin-top: 40px;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.scroll-down span {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bagian Booking */
+.booking-section {
+    padding: 80px 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    background-color: #0c1a1e;
+}
+
+.booking-content {
+    position: relative;
+}
+
+.booking-form {
+    display: flex;
+    align-items: flex-end; /* Memastikan semua elemen form sejajar di bawah */
+    gap: 10px; /* Jarak antar input group */
+    margin-top: 40px;
+    background-color: #172a30;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 0 15px;
+}
+
+.input-group label {
+    font-size: 0.7rem;
+    color: #ccc;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    width: 100%;
+}
+
+.input-group select {
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+.input-group select option {
+    background-color: #172a30;
+    color: #ffffff;
+}
+
+.booking-form button {
+    background-color: #e0ac5c;
+    color: #172a30;
+    border: none;
+    padding: 15px 30px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 50px; /* Menyamakan tinggi tombol */
+}
+
+.booking-form button:hover {
+    background-color: #c99a51;
+}
+
+.booking-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px 0 25px 0;
+    display: block;
+}
+
+/* Bagian Umum Section Lanjutan */
+.section-title {
+    position: relative;
+    padding-left: 20px;
+}
+
+.section-title .number {
+    font-size: 10rem;
+    font-weight: 700;
+    color: #ffffff;
+    opacity: 0.05;
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: translateY(-75%);
+    z-index: 1;
+}
+
+.section-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.section-text p {
+    margin-top: 20px;
+    color: #a0a0a0;
+    line-height: 1.6;
+    max-width: 450px;
+}
+
+/* Section 02: Lengkapi Data */
+.data-section {
+    padding: 80px 100px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 60px;
+    background-color: #0c1a1e;
+}
+
+.form-card {
+    display: flex;
+    background-color: #172a30;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.form-image {
+    width: 40%;
+}
+
+.form-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.form-fields {
+    width: 60%;
+    padding: 30px;
+}
+
+.form-fields summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #e0ac5c;
+    letter-spacing: 1px;
+    padding-bottom: 15px;
+    list-style: none; /* Menghilangkan panah default */
+}
+
+.form-fields summary::-webkit-details-marker {
+    display: none; /* Menghilangkan panah di Chrome/Safari */
+}
+
+.form-fields form {
+    margin-top: 15px;
+}
+
+.form-fields label {
+    font-size: 0.8rem;
+    color: #ccc;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-fields input[type="text"] {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #4a5a5d;
+    color: #ffffff;
+    padding: 8px 0;
+    margin-bottom: 20px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-fields input[type="text"]:focus {
+    border-bottom-color: #e0ac5c;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.radio-group input[type="radio"] {
+    accent-color: #e0ac5c;
+}
+
+.radio-group label {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+.form-fields button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2a3a3d;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+
+.form-fields button:hover {
+    background-color: #3a4a4d;
+}
+
+/* Section Verifikasi & Feedback */
+.verification-section {
+    padding: 80px 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 kolom */
+    align-items: center; /* Sejajarkan secara vertikal di tengah */
+    gap: 60px;
+}
+
+.verification-section .section-title {
+    padding-left: 0;
+}
+
+.verification-section .section-title .number {
+    left: -80px;
+}
+
+.verification-image img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Penataan untuk form feedback */
+.feedback-form {
+    margin-top: 30px; /* Jarak dari paragraf di atasnya */
+}
+
+.feedback-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.feedback-form textarea {
+    width: 100%;
+    max-width: 450px;
+    background: #172a30;
+    border: 1px solid #3a4a4d;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.feedback-form button {
+    background-color: #e0ac5c;
+    color: #172a30;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.feedback-form button:hover {
+    background-color: #c99a51;
+}
+/* Footer */
+.site-footer {
+    background-color: #0c1a1e;
+    padding: 60px 100px;
+    border-top: 1px solid #2a3a3d;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-column h4 {
+    color: #e0ac5c;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.footer-column p, .footer-column span {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-column span {
+    display: block;
+    margin-top: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ffffff;
+}
